@@ -32,6 +32,8 @@
 
 	I have tested this only on an arduino Mega 2560 where it runs smooth. Everyone is invited to adapt/improve it for
 	other arduino boards and sizes.
+
+        Example Video: http://vimeo.com/user24777443/arduino-snake-library
 */
 
 #include <Snake.h>
