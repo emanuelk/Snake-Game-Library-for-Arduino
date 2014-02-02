@@ -1,5 +1,5 @@
 /*
-	Yet Another Snake Game library.
+	Yet Another Snake Game Library.
 	Copyright (C) 2014  Emanuel Knöpfel
 
 	This program is free software: you can redistribute it and/or modify

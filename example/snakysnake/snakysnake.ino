@@ -1,6 +1,6 @@
 /*
-	Yet Another Snake Game library.
-	Copyright (C) 2014  Emanuel Knöpfel
+	Yet Another Snake Game Library.
+	Copyright (C) 2014  Emanuel KnÃ¶pfel
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-	Created by Emanuel Knöpfel, February 1, 2014.
+	Created by Emanuel Knï¿½pfel, February 1, 2014.
 
 	snakysnake.ino  
 	This example demonstrates the usage of YASGL. It also uses the FastLED library(which you do not need)
