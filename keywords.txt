@@ -1,0 +1,35 @@
+#######################################
+# Syntax Coloring Map Snake
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Snake	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+goLeft	KEYWORD2
+goRight	KEYWORD2
+goUp	KEYWORD2
+goDown	KEYWORD2
+tick	KEYWORD2
+
+resetGame	KEYWORD2
+wasGameReset	KEYWORD2
+getSnakeLenght	KEYWORD2
+increaseSize	KEYWORD2
+setDelay	KEYWORD2
+
+setBodyColor	KEYWORD2
+setHeadColor	KEYWORD2
+setFoodColor	KEYWORD2
+
+pixel	KEYWORD2
+colorRGB	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
