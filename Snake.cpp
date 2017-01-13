@@ -1,6 +1,6 @@
 /*
 	Yet Another Snake Game Library.
-	Copyright (C) 2014  Emanuel Knöpfel
+	Copyright (C) 2014  Emanuel KnÃ¶pfel
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "snake.h"
+#include "Snake.h"
 
 
 Snake::Snake(int fieldSizeX,int fieldSizeY, int moveDelay)
