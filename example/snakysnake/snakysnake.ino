@@ -73,10 +73,7 @@ void changeRGBtoGBR()
 
 void clearScreen()
 {
-		for(int whiteLed = 0; whiteLed < NUM_LEDS; whiteLed++)
-		{
-			leds[whiteLed].setRGB( 3, 3, 3);
-		}
+	fill_solid(leds, NUM_LEDS, CRGB::Black);
 }
 
 void loop() 
