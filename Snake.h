@@ -1,6 +1,6 @@
 /*
 	Yet Another Snake Game Library.
-	Copyright (C) 2014  Emanuel Knöpfel
+	Copyright (C) 2014  Emanuel Knï¿½pfel
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -79,7 +79,8 @@ public:
 	void tick();
 
 	void resetGame();
-	bool wasGameReset();	
+	bool wasGameReset();
+	void unsetGameReset();	
 	int getSnakeLenght();
 	void increaseSize();
 	void setDelay(int moveDelay);

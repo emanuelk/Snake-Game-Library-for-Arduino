@@ -76,31 +76,34 @@ void clearScreen()
 	fill_solid(leds, NUM_LEDS, CRGB::Black);
 }
 
+byte resetCounter = 0;
+
 void loop() 
 {	
-	Snake::pixel* snakeLimbs=snakeGame.getSnakeLimbs();//this needs to be updated every frame
-	Snake::pixel* snakeFood = snakeGame.getFoodPositions();//this needs to be updated every frame
-	clearScreen();
-	setPixel(snakeFood[0].posX,8-snakeFood[0].posY,snakeFood[0].pixelColor.r,snakeFood[0].pixelColor.g,snakeFood[0].pixelColor.b); // display the food
-	for(int i=0; i<snakeGame.getSnakeLenght(); i++)
-	{
-		//display the snake, my setpixel method has x=0, y=0 at the top left, but the library has it at bottom left, so I invert the Y-Axis:
-		setPixel(snakeLimbs[i].posX,8-snakeLimbs[i].posY,snakeLimbs[i].pixelColor.r,snakeLimbs[i].pixelColor.g,snakeLimbs[i].pixelColor.b);
-	}
-	FastLED.show();
-	snakeGame.tick();//main loop for the snake library
-	if(snakeGame.wasGameReset())// if the snake bit itself or the wall, flash a little
-	{
-		for(int i=0; i<30; i++)
-		{
-			changeRGBtoGBR();
+	EVERY_N_MILLISECONDS( 30 ) {
+		if(snakeGame.wasGameReset()) // if the snake bit itself or the wall, flash a little
+        {
+            changeRGBtoGBR();
+            FastLED.show();
+            resetCounter++;
+            if (resetCounter > 30) {
+                resetCounter = 0;
+                snakeGame.unsetGameReset();
+            }
+        } else {
+			Snake::pixel* snakeLimbs=snakeGame.getSnakeLimbs();//this needs to be updated every frame
+			Snake::pixel* snakeFood = snakeGame.getFoodPositions();//this needs to be updated every frame
+			clearScreen();
+			setPixel(snakeFood[0].posX,8-snakeFood[0].posY,snakeFood[0].pixelColor.r,snakeFood[0].pixelColor.g,snakeFood[0].pixelColor.b); // display the food
+			for(int i=0; i<snakeGame.getSnakeLenght(); i++)
+			{
+				//display the snake, my setpixel method has x=0, y=0 at the top left, but the library has it at bottom left, so I invert the Y-Axis:
+				setPixel(snakeLimbs[i].posX,8-snakeLimbs[i].posY,snakeLimbs[i].pixelColor.r,snakeLimbs[i].pixelColor.g,snakeLimbs[i].pixelColor.b);
+			}
 			FastLED.show();
-			delay(40);
+			snakeGame.tick();//main loop for the snake library
 		}
 	}
-	else
-		delay(30);
-
 }
 
 byte incomingByte=0;

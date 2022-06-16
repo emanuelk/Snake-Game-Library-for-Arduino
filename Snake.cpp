@@ -169,13 +169,17 @@ bool Snake::wasGameReset()
 {
 	if(_wasReset)
 	{
-		_wasReset=false;
 		return true;
 	}
 	else
 	{
 		return false;
 	}
+}
+
+void Snake::unsetGameReset() 
+{
+	_wasReset=false;
 }
 
 void Snake::checkFood()
