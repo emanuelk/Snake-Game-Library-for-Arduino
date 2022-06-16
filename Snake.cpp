@@ -197,8 +197,8 @@ void Snake::relocateFood()
 {
 	do
 	{
-		food[0].posX = random(0, 14);
-		food[0].posY = random(0, 8);
+		food[0].posX = random(0, _fieldSizeX);
+		food[0].posY = random(0, _fieldSizeY);
 	}while(isPointOnSnake(food[0]));
 }
 
